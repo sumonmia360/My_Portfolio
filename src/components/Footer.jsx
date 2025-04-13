@@ -1,7 +1,6 @@
 import { SOCIAL_MEDIA_LINKS } from "../constants";
 import logo from "../assets/chal.png";
 import { motion } from "framer-motion";
-import { i } from "framer-motion/client";
 
 const Footer = () => {
   return (

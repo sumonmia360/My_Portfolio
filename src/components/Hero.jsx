@@ -1,4 +1,5 @@
 import { HERO } from "../constants";
+import { HERO1 } from "../constants";
 import sumon_img from "../assets/sumonmia.png";
 import { motion } from "framer-motion";
 
@@ -17,7 +18,18 @@ const Hero = () => {
         <p className="p-2 text-3xl tracking-tighter lg:text-4xl">
           {HERO.greet}
         </p>
-        <p className="mb-8 p-2 text-xl">{HERO.description}</p>
+        <p className="mb-8 p-2 text-xl">
+          {HERO.description} <br /> {HERO1.description}
+        </p>
+        <button className="border hover:bg-sky-700 ml-2 border-stone-50/30 rounded p-1">
+          <a
+            target="_black"
+            href="https://drive.proton.me/urls/N0XEXMH13C#lm8e92x1B7a8"
+          >
+            {" "}
+            Resume
+          </a>
+        </button>
       </motion.div>
       <motion.div
         initial={{ opacity: 0, x: 0.8 }}
