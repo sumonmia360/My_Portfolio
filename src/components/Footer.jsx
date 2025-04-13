@@ -1,22 +1,34 @@
 import { SOCIAL_MEDIA_LINKS } from "../constants";
 import logo from "../assets/chal.png";
+import { motion } from "framer-motion";
+import { i } from "framer-motion/client";
 
 const Footer = () => {
   return (
     <div className="mb-8 mt-20">
       <div className="flex items-center justify-center">
-        <img src={logo} width={200} className="my-20" />
+        <motion.img
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.5 }}
+          src={logo}
+          width={200}
+          className="my-20"
+        />
       </div>
       <div className="flex items-center justify-center gap-8">
-        {SOCIAL_MEDIA_LINKS.map((link) => (
-          <a
+        {SOCIAL_MEDIA_LINKS.map((link, index) => (
+          <motion.a
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.2, delay: index * 0.5 }}
             key={link.name}
             href={link.href}
             target="_blank"
             rel="noopener noreferrer"
           >
             {link.icon}
-          </a>
+          </motion.a>
         ))}
       </div>
 

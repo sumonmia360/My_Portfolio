@@ -24,8 +24,9 @@ const Skills = () => {
         className="mx-2 flex flex-col rounded-3xl px-4 py-2 lg:px-20 border border-stone-50/30"
       >
         {SKILLS.map((skills, index) => (
-          <div
+          <motion.div
             key={index}
+            variants={itemVariants}
             className={`py-6 flex items-center justify-between ${
               index !== SKILLS.length - 1 ? "border-b border-stone-50/30 " : ""
             }`}
@@ -38,7 +39,7 @@ const Skills = () => {
             <div className="text-md font-semibold lg:text-xl">
               <span>{skills.experience}</span>
             </div>{" "}
-          </div>
+          </motion.div>
         ))}
       </motion.div>
     </div>
