@@ -5,6 +5,9 @@ import Navbar from "./components/Navbar";
 import Projects from "./components/Projects";
 import Bio from "./components/Bio";
 import Skills from "./components/Skills";
+import WorkExperience from "./components/WorkExperience";
+import EducationtSection from "./components/EducationSection";
+import ContractForm from "./components/ContactForm";
 
 const App = () => {
   return (
@@ -16,6 +19,9 @@ const App = () => {
         <Projects />
         <Bio />
         <Skills />
+        <WorkExperience />
+        <EducationtSection />
+        <ContractForm />
       </div>
     </div>
   );
